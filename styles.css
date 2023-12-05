@@ -1,0 +1,69 @@
+header {
+    display: flex;
+    flex-direction: column; /* Change flex-direction to column */
+    padding: 10px; /* Add some padding for better spacing */
+}
+
+#logoAndName {
+    padding-right: 10px;
+    font-weight: bold; /* Optionally make the company name bold */
+    flex-direction: row;
+    display: flex;  
+}
+
+#logo {
+    padding-right: 10px;
+}
+
+nav {
+    background-color: gray;
+    display: flex;
+    margin-top: 10px; /* Add margin to separate the rows */
+    padding: 10px;  
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul button {
+    width: 70px;
+    height: 35px;
+}
+
+li {
+    border: 1px solid black;
+    margin-right: 5px;
+}
+
+footer {
+    border: 2px solid black;
+    height: 15vw;
+}
+
+#searchBarcontainer {
+    margin-left: auto;
+}
+
+#searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 30px 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white url('magnifying-glass-icon.png') no-repeat right 8px center;
+    background-size: 20px;
+}
+
+/* Optional: Style the input on focus */
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
