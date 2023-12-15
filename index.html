@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <title>Home Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <div id="logoAndName">
-            <div id="logo">LOGO</div>
-            <div>Paradigm Pet Professionals</div>
+        <div id="logoAndSlogan">
+            <img src="Images/Paradigm Pet Professionals Header Logo.png" alt="Paradigm Pet Professionals Header Logo">
+            <p>Evidence-based pet care advice for every pet lover</p>
         </div>
         <nav>
-            <ul>
-                <li><button onclick="window.location.href='/index.html'">Home</button></li>
-                <li><button onclick="window.location.href='/dogs.html'">Dogs</button></li>
-                <li><button onclick="window.location.href='/cats.html'">Cats</button></li>
-                <li><button onclick="window.location.href='/birds.html'">Birds</button></li>
-                <li><button onclick="window.location.href='/faqs.html'">FAQs</button></li>
+            <ul id="navigationButtons">
+                <li><button onclick="window.location.href='./index.html'">Home</button></li>
+                <li><button onclick="window.location.href='./dogs.html'">Dogs</button></li>
+                <li><button onclick="window.location.href='./cats.html'">Cats</button></li>
+                <li><button onclick="window.location.href='./birds.html'">Birds</button></li>
+                <li><button onclick="window.location.href='./fish.html'">Fish</button></li>
+                <li><button onclick="window.location.href='./other-animals.html'">Other Animals</button></li>
             </ul>
             <div id="searchBarcontainer">
                 <div id="searchBar">
@@ -27,32 +29,96 @@
         </nav>
     </header>
 
-    <main role="main">
-        <article>
-            <h2>Title 1</h2>
-            <p>
-                Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets. At Pet Paradigm Professionals, our mission is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or “Pexperts”—have been working with pet owners and professionals alike for the past twelve years. They offer one-on-one consultations with current and prospective pet owners as well as group presentations designed for veterinary, pet shelter, and pet breeding professionals.
+    <main style="margin-top: 20px;">
+        <div style="width: 40vw; margin-left: 20px;">
+            <article>
+                <h2>Discover the Joy of Pet Companionship with Us</h2>
+                <p>
+                    Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets. At Pet Paradigm Professionals, our mission is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or “Pexperts”—have been working with pet owners and professionals alike for the past twelve years. They offer one-on-one consultations with current and prospective pet owners as well as group presentations designed for veterinary, pet shelter, and pet breeding professionals.
+                </p>
+            </article>
 
-                Looking for basic pet care advice for the most common type of pets? Need additional help determining which type of pet is right for you and your family? We will work with you and provide tailored evidence-based pet care to ensure lifelong health and wellness of your new companion.
+            <article>
+                <p>
+                    Looking for basic pet care advice for the most common type of pets? Need additional help determining which type of pet is right for you and your family? We will work with you and provide tailored evidence-based pet care to ensure lifelong health and wellness of your new companion.
+                    We are also happy to help you navigate the adoption process! We will guide you through each step in the process from determining which type of pet is best suited for your family and home environment, to completing the necessary paperwork, to bringing your new loved one home. Please fill out our contact form to request a consultation. We will contact you within 48 hours to schedule a consultation. All fields are required.
+                </p>
+            </article>
+        </div>
 
-                Looking for your new best friend? The following organizations can help you find and adopt the perfect companion:
-                •	General Adoption Resources: https://theshelterpetproject.org/
-                •	ASPCA: https://www.aspca.org/
-                •	Bird Rescue: https://ftlob.rescuegroups.org/
+        <div id="imageContainer" style="width:40vw">
+            <div class="image-with-text" onclick="redirectToPage('dogs.html')">
+                <img src="Images/Paradigm Pet Professionals Dog Image 1.png" alt="Dog Image">
+                <p class="image-text">Dog's grooming needs</p>
+            </div>
+            <div class="image-with-text" onclick="redirectToPage('cats.html')">
+                <img src="Images/Paradigm Pet Professionals Cat Image 1.png" alt="Cat Image">
+                <p class="image-text">Cat's feeding needs</p>
+            </div>
+            <div class="image-with-text" onclick="redirectToPage('fish.html')">
+                <img src="Images/Paradigm Pet Professionals Fish Image 1.png" alt="Fish Image">
+                <p class="image-text">Fish Guidelines</p>
+            </div>
+            <div class="image-with-text" onclick="redirectToPage('birds.html')">
+                <img src="Images/Paradigm Pet Professionals Bird Image 1.png" alt="Bird Image">
+                <p class="image-text">"Bird's Well-being</p>
+            </div>
+            <div class="image-with-text" onclick="redirectToPage('other-animals.html')">
+                <img src="Images/Paradigm Pet Professionals Hamster Image 1.png" alt="Hamster Image">
+                <p class="image-text">Needs of other Small Pets</p>
+            </div>
+        </div>
+        <aside style="width:20vw">
+            <div class="bordered-content">
+                <p>Looking for your new best friend? The following organizations can help you find and adopt the perfect companion:</p>
+                <ul>
+                    <li><a href="https://theshelterpetproject.org/" target="_blank">General Adoption Resources</a></li>
+                    <li><a href="https://www.aspca.org/" target="_blank">ASPCA</a></li>
+                    <li><a href="https://ftlob.rescuegroups.org/" target="_blank">Bird Rescue</a></li>
+                </ul>
 
-                We are also happy to help you navigate the adoption process! We will guide you through each step in the process from determining which type of pet is best suited for your family and home environment, to completing the necessary paperwork, to bringing your new loved one home. Please fill out our contact form to request a consultation. We will contact you within 48 hours to schedule a consultation. All fields are required.
-            </p>
-        </article>
-        <article>
-            <h2>Title 2</h2>
-            <p>Content 2</p>
-        </article>
+                <img src="Images/Paradigm Pet Professionals Cat Image 2.png">
+            </div>
+        </aside>
     </main>
 
     <footer>
-        <address>
-        </address>
+        <p>About</p>
+        <p>Contact Us</p>
+        <button id="openModalBtn">Consultation Form</button>
+        <img src="Images/Paradigm Pet Professionals Logo.png" alt="Paradigm Pet Professionals Logo">
+        <p style="margin-right: 10px;">&copy; 2023 Paradigm Pet Professionals</p>
     </footer>
+    <section id="consultation-form" class="modal">
+        <form class="modal-content" style="background-color: #fff; color: #003B6D;">
+            <div style="display: flex; justify-content: flex-end">
+                <span class="close-modal" style="cursor: pointer; color: #003B6D; font-size: 30px; margin-right: 0;">&times;</span>
+            </div>
+            <h1 style="color: #003B6D;">Consultation Form</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="timezone">Time Zone:</label>
+            <input type="text" id="timezone" name="timezone" required>
+
+            <label for="pet-name">Pet's Name:</label>
+            <input type="text" id="pet-name" name="pet-name" required>
+
+            <label for="pet-type">Pet's Type:</label>
+            <input type="text" id="pet-type" name="pet-type" required>
+
+            <label for="pet-age">Pet's Age:</label>
+            <input type="text" id="pet-age" name="pet-age" required>
+
+            <input type="submit" value="Submit" style="background-color: #003B6D; color: #fff;">
+        </form>
+
+    </section>
 </body>
 </html>
