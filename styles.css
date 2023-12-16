@@ -1,49 +1,86 @@
+
+/* Header styles */
 header {
     display: flex;
-    flex-direction: column; /* Change flex-direction to column */
-    padding: 10px; /* Add some padding for better spacing */
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 0;
 }
-
-#logoAndName {
-    padding-right: 10px;
-    font-weight: bold; /* Optionally make the company name bold */
-    flex-direction: row;
-    display: flex;  
-}
-
-#logo {
-    padding-right: 10px;
-}
-
-nav {
-    background-color: gray;
+#logoAndSlogan {
     display: flex;
-    margin-top: 10px; /* Add margin to separate the rows */
-    padding: 10px;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 30px;
+    color: #003B6D;
 }
 
-ul {
+#logoAndSlogan img {
+    height: 90px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #003B6D;
+    display: flex;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#navigationButtons {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-ul button {
-    width: 70px;
-    height: 35px;
+#navigationButtons button {
+    display: block;
+    padding: 10px 15px;
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    border: none;
+    background-color: #003B6D;
+    color: #BDBDBD;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-li {
-    border: 1px solid black;
-    margin-right: 5px;
+#navigationButtons button:hover {
+    background-color: #042d4f;
 }
 
+/* Footer styles */
 footer {
-    border: 2px solid black;
-    height: 15vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    align-items: center;
+    height: 40px;
 }
 
+footer a, footer p {
+    margin-left: 20px; 
+}
+
+footer img {
+    width: 40px;
+    margin-left: 20px;
+    margin-right: -10px;
+}
+
+
+/* Search bar styles */
 #searchBarcontainer {
     margin-left: auto;
 }
@@ -52,18 +89,188 @@ footer {
     position: relative;
     display: flex;
     align-items: center;
+    height: 50px;
 }
 
 .search-input {
+    width: 20vw;
+    height: 30px;
     padding: 8px 30px 8px 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background: white url('magnifying-glass-icon.png') no-repeat right 8px center;
+    background: white url('Images/search_FILL0_wght400_GRAD0_opsz24.png') no-repeat right 8px center;
     background-size: 20px;
 }
 
-/* Optional: Style the input on focus */
 .search-input:focus {
     outline: none;
     border-color: #007bff;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+}
+
+article p {
+    font-size: 18px;
+}
+
+/* Aside styles */
+aside {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+aside .bordered-content {
+    border: 1px solid black;
+    padding: 10px; 
+}
+.bordered-content img {
+    width: 100%;
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+/* Image container styles */
+#imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-with-text {
+    position: relative;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #676767;
+    color: #00386D;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    width: 89%;
+}
+
+#imageContainer img {
+    width: 200px;
+    height: 160px;
+    margin: 7px;
+    cursor: pointer;
+}
+
+section.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.modal-content {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#openModalBtn {
+    border: none;
+    background: none;
+    color: #003B6D;
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+    text-decoration: underline;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+#openModalBtn:hover {
+    text-decoration: none;
+    color: #6699CC;
+}
+h1, h2 {
+    color: #00386D;
+}
+
+p, ul {
+    color: #6699CC;
+}
+
+#animalImageContainer {
+    width: 30vw;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#animalImageContainer img {
+    width: 250px;
+    max-height: 300px;
 }
